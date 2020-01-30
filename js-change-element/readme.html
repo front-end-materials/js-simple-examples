@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript: change an element</title>
+  <style>
+    body, button {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.25em;
+    }
+    button {
+      font-size: 1em;
+    }
+    .changeMe {
+      background: #336;
+      color: #fcc;
+      transition: all 1s;
+    }
+  </style>
+</head>
+
+<body>
+
+  <p>Click the button to change the colours of the links—the JavaScript adds a class "highlight" to achieve this.</p>
+
+  <p>A link <a class="thelinks" href="#">element with some text</a>.</p>
+
+  <p>Another link <a class="thelinks" href="#">element with more text</a>.</p>
+
+  <button id="changeLinks">Change link colours</button>
+
+  <script>
+    const changeLinks = document.getElementById('changeLinks');
+    const thelinks = document.getElementsByClassName('thelinks');
+
+    const addClass = () => {
+      for(i=0; i < thelinks.length; i++){
+        thelinks[i].classList.toggle("changeMe");
+      }
+    }
+    
+    // remove the 'const' from the function:
+    // addClass = "hello";
+    // console.log(addClass);
+
+    changeLinks.addEventListener("click", addClass);
+  </script>
+
+</body>
+</html>
