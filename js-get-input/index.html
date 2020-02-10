@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get user input</title>
+</head>
+<body>
+  
+<form id="getName" action="#" method="post">
+	<label for="userName">Enter name:</label>
+	<input id="userName" type="text" placeholder="name here please :-)" style="font-size: 1em">
+	<input type="submit" style="background: #ccc; color: #666; border-radius: 10%; font-size: 1em;">
+</form>
+
+<p style="margin-top: 1em;">Hello, <span id="myName">anonymous user! Your name?</span></p>
+
+<script>
+	function PerformGreeting() {
+    if(userName.value){
+      myName.innerHTML = `<strong>${userName.value}</strong>!`;
+    } else {
+      myName.innerHTML = `<strong>person with no name</strong>!`;
+    }
+    event.preventDefault(); // disables default form submission
+    // return false; // prevents further "bubbling" up of event
+	}
+
+	getName.addEventListener("submit", PerformGreeting);
+</script>
+
+</body>
+</html>

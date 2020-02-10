@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="myBtn" style="cursor: pointer; border-radius: 4px; background: #aaa;">What's the date?</button>
+
+  <p id="demo">I've no idea. Click the button.</p>
+
+<script>
+  document.getElementById("myBtn").addEventListener("click", showDate);
+  const dateDemo = document.getElementById("demo");
+
+  function showDate() {
+  	let d = new Date();
+  	dateDemo.innerHTML = `Oh, it’s: ${d.toDateString()}!`;
+  }
+</script>
+
+</body>
+</html>
