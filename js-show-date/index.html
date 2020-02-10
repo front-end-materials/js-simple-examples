@@ -20,13 +20,15 @@
   <p id="demo">I've no idea. Click the button.</p>
 
 <script>
-  document.getElementById("myBtn").addEventListener("click", showDate);
-  const dateDemo = document.getElementById("demo");
 
-  function showDate() {
-  	let d = new Date();
-  	dateDemo.innerHTML = `Oh, it’s: ${d.toDateString()}!`;
-  }
+document.getElementById("myBtn").addEventListener("click", showDate);
+const dateDemo = document.getElementById("demo");
+
+function showDate() {
+	let d = new Date();
+	dateDemo.innerHTML = `Oh, it’s: ${d.toDateString()}!`;
+}
+
 </script>
 
 </body>

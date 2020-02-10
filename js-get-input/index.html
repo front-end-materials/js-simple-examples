@@ -25,17 +25,19 @@
 <p style="margin-top: 1em;">Hello, <span id="myName">anonymous user! Your name?</span></p>
 
 <script>
-	function PerformGreeting() {
-    if(userName.value){
-      myName.innerHTML = `<strong>${userName.value}</strong>!`;
-    } else {
-      myName.innerHTML = `<strong>person with no name</strong>!`;
-    }
-    event.preventDefault(); // disables default form submission
-    // return false; // prevents further "bubbling" up of event
-	}
 
-	getName.addEventListener("submit", PerformGreeting);
+function PerformGreeting() {
+  if(userName.value){
+    myName.innerHTML = `<strong>${userName.value}</strong>!`;
+  } else {
+    myName.innerHTML = `<strong>person with no name</strong>!`;
+  }
+  event.preventDefault(); // disables default form submission
+  // return false; // prevents further "bubbling" up of event
+}
+
+getName.addEventListener("submit", PerformGreeting);
+
 </script>
 
 </body>

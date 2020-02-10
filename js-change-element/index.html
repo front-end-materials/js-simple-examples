@@ -24,28 +24,30 @@
 
   <p>Click the button to change the colours of the links—the JavaScript adds a class "highlight" to achieve this.</p>
 
-  <p>A link <a class="thelinks" href="#">element with some text</a>.</p>
+  <p>A link <a class="thelinks" href="#">link 1 text</a>.</p>
 
-  <p>Another link <a class="thelinks" href="#">element with more text</a>.</p>
+  <p>Another link <a class="thelinks" href="#">link 2 text</a>.</p>
 
   <button id="changeLinks">Change link colours</button>
 
-  <script>
-    const changeLinks = document.getElementById('changeLinks');
-    const thelinks = document.getElementsByClassName('thelinks');
-
-    const addClass = () => {
-      for(i in thelinks){
-        thelinks[i].classList.toggle("changeMe");
-      }
-    }
+<script>
     
-    // remove the 'const' from the function then:
-    // addClass = "hello";
-    // console.log(addClass);
+const changeLinks = document.getElementById('changeLinks');
+const thelinks = document.getElementsByClassName('thelinks');
 
-    changeLinks.addEventListener("click", addClass);
-  </script>
+const addClass = () => {
+  for(i in thelinks){
+    thelinks[i].classList.toggle("changeMe");
+  }
+}
+
+// remove the 'const' from the function then:
+// addClass = "hello";
+// console.log(addClass);
+
+changeLinks.addEventListener("click", addClass);
+
+</script>
 
 </body>
 </html>

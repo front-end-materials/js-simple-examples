@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript: change background image</title>
+  <style>
+    body {
+      font: 1.5em Arial, Helvetica, sans-serif;
+    }
+    #picture {
+      font-size: 75%;
+      text-align: center;
+      line-height: 178px;
+      height: 178px;
+      width: 300px;
+      background-repeat: no-repeat;
+      border: solid green 4px;
+      transition: all 1s;
+    }
+    .car {
+      border-color: silver;
+      background-image: url("images/tesla-model-s.jpg");
+    }
+    .cat {
+      border-color: pink;
+      background-image: url("images/kitten.jpg");
+    }
+  </style>
+</head>
+<body>
+  
+  <p>See a: <span id="photo1">Tesla</span>  /  <span id="photo2">kitten</span>!</p>
+
+  <p id="picture">your choice of picture here</p>
+
+<script>
+
+function showImage(whichPic) {
+  picture.innerHTML = "";
+  if (whichPic === "photo1") {
+    picture.classList.remove("cat");
+    picture.classList.add("car");
+  } else {
+    picture.classList.remove("car");
+    picture.classList.add("cat");
+  }
+}
+
+photo1.addEventListener("click", function(){ showImage(this.id) });
+photo2.addEventListener("click", showImage);
+
+</script>
+</body>
+</html>
