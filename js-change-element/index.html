@@ -35,12 +35,12 @@
     const thelinks = document.getElementsByClassName('thelinks');
 
     const addClass = () => {
-      for(i=0; i < thelinks.length; i++){
+      for(i in thelinks){
         thelinks[i].classList.toggle("changeMe");
       }
     }
     
-    // remove the 'const' from the function:
+    // remove the 'const' from the function then:
     // addClass = "hello";
     // console.log(addClass);
 
