@@ -28,21 +28,20 @@
 </head>
 <body>
   
-  <p>See a: <span id="photo1">Tesla</span>  /  <span id="photo2">kitten</span>!</p>
+  <p>See a: <span id="car">Tesla</span>  /  <span id="cat">kitten</span>!</p>
 
   <p id="picture">your choice of picture here</p>
 
 <script>
 
-function showImage(whichPic) {
+function showImage() {
   picture.innerHTML = "";
-  console.log(whichPic);
+  console.log(event.target.id);
   picture.classList = [];
-  picture.classList.add(whichPic)
+  picture.classList.add(event.target.id)
 }
 
-photo1.addEventListener("click", function(){ showImage("car") });
-photo2.addEventListener("click", function(){ showImage("cat") });
+[car,cat].forEach(c => c.addEventListener( "click", showImage ));
 
 </script>
 </body>
