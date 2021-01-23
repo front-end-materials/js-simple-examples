@@ -51,10 +51,13 @@
 
 <script>
     
-const thelinks = document.getElementsByClassName("thelinks");
+// const thelinks = document.getElementsByClassName("thelinks");
+const thelinks = document.querySelectorAll(".thelinks");
 
 const swapClass = () => {
+  
   console.log(thelinks);
+  
   for (let i = 0; i < thelinks.length; i++) {
     thelinks[i].classList.toggle("changeMe");
   }
